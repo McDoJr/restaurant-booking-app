@@ -29,3 +29,9 @@
     font-size: 18px;
     letter-spacing: .2rem;
 }
+
+@media (max-width: 1366px) {
+    .box h1 {
+        font-size: 70px;
+    }
+}

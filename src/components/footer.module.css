@@ -90,3 +90,31 @@
     color: var(--primary-color);
     cursor: pointer;
 }
+
+@media (max-width: 1366px) {
+    .box {
+        padding: 0 50px;
+    }
+
+    .container .copyright {
+        margin: 50px 0 0 90px;
+    }
+
+    .right, .middle {
+        height: 100%;
+    }
+
+    .right h2, .middle h2 {
+        font-size: 16px;
+    }
+
+    .right span, .middle span {
+        font-size: 12px;
+    }
+
+    .right .icon {
+        width: 12px;
+        height: 12px;
+        margin-right: 8px;
+    }
+}

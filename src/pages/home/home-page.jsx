@@ -22,7 +22,6 @@ const HomePage = () => {
     const heading = (
         <>
             <h1>Enjoy Tasty & Fresh Food</h1>
-            <h1>Anytime</h1>
             <h2>FRESH AND PREMIUM QUALITY</h2>
             <button onClick={() => navigate("/reservation")}>BOOK NOW</button>
         </>

@@ -30,3 +30,13 @@
     font-weight: 400;
     letter-spacing: .2rem;
 }
+
+@media (max-width: 1366px) {
+    .container {
+        height: 75vh;
+    }
+
+    .box h1 {
+        font-size: 60px;
+    }
+}

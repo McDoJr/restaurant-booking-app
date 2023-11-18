@@ -67,3 +67,26 @@
     width: 50px;
     height: 50px;
 }
+
+@media (max-width: 1366px) {
+    .container {
+        padding: 50px 84px;
+    }
+    .left h1 {
+        font-size: 35px;
+    }
+
+    .left button {
+        font-size: 13px;
+        padding: 10px 30px;
+    }
+
+    .right .icon {
+        width: 45px;
+        height: 45px;
+    }
+
+    .right span {
+        font-size: 45px;
+    }
+}

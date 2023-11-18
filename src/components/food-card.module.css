@@ -38,3 +38,22 @@
     top: 226px;
     right: 80px;
 }
+
+@media (max-width: 1366px) {
+    .container {
+        width: 250px;
+        height: 400px;
+        padding: 40px 0;
+    }
+
+    .container img {
+        width: 180px;
+        height: 180px;
+    }
+
+    .container span {
+        padding: 15px 13px;
+        top: 189px;
+        right: 33px;
+    }
+}

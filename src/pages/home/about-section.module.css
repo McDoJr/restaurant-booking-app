@@ -47,3 +47,17 @@
     font-weight: 400;
     letter-spacing: .2rem;
 }
+
+@media (max-width: 1366px) {
+    .details {
+        padding: 30px;
+    }
+
+    .details h3 {
+        font-size: 40px;
+    }
+
+    .details button {
+        padding: 15px 40px;
+    }
+}
