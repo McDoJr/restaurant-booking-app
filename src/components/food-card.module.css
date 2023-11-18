@@ -1,0 +1,40 @@
+.container {
+    height: 500px;
+    width: 390px;
+    background-color: #ffffff;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    position: relative;
+    border-radius: 10px;
+}
+
+.container img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.container h3 {
+    font-size: 20px;
+    color: var(--primary-color);
+}
+
+.container span {
+    padding: 25px 23px;
+
+    color: #ffffff;
+    background-color: var(--primary-color);
+    font-size: 20px;
+    border: 1px solid #ffffff;
+    border-radius: 50%;
+
+    position: absolute;
+    top: 226px;
+    right: 80px;
+}

@@ -1,0 +1,24 @@
+.icon {
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+    border-radius: 50%;
+
+    background-color: var(--primary-color);
+    color: #ffffff;
+
+    position: fixed;
+    right: 100px;
+    bottom: 80px;
+    transition: all .3s ease;
+    cursor: pointer;
+    /*mix-blend-mode: difference;*/
+    opacity: 0;
+    pointer-events: none;
+}
+
+.icon.active {
+    opacity: 1;
+    pointer-events: auto;
+    bottom: 50px;
+}
