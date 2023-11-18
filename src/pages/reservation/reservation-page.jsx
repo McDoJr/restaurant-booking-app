@@ -3,6 +3,8 @@ import HomeSection from "../../components/home-section.jsx";
 import background from "../../images/reservation_bg.jpg";
 import {useEffect} from "react";
 import {setPageTitle} from "../../utils/utils.js";
+import BookSection from "./book-section.jsx";
+import Calendar from "../../components/calendar.jsx";
 
 const ReservationPage = () => {
 
@@ -22,6 +24,8 @@ const ReservationPage = () => {
         <>
             <Header />
             <HomeSection heading={heading} background={background}/>
+            <BookSection />
+            {/*<Calendar/>*/}
         </>
     )
 }

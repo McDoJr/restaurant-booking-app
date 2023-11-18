@@ -1,0 +1,100 @@
+.container {
+    width: 50%;
+    padding: 50px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    color: #ffffff;
+    background-color: var(--primary-color);
+}
+
+.top {
+    width: 100%;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.top h1 {
+    margin: 0 20px;
+    font-family: var(--heading-font);
+    font-size: 40px;
+    font-weight: 400;
+}
+
+.top .icon {
+    width: 30px;
+    height: 30px;
+}
+
+.middle {
+    width: 100%;
+    margin: 10px 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.middle ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.middle .weeks {
+    font-size: 24px;
+}
+
+.middle .days{
+    margin-bottom: 20px;
+}
+.middle li{
+    color: #ffffff;
+    width: calc(100% / 7);
+    margin-bottom: 10px;
+}
+.middle .weeks li{
+    font-weight: 500;
+    cursor: default;
+}
+.middle .days li{
+    z-index: 1;
+    cursor: pointer;
+    position: relative;
+    margin-top: 30px;
+    font-size: 20px;
+}
+
+.days li.inactive{
+    color: #aaa;
+}
+.days li.active{
+    color: #fff;
+}
+.days li::before{
+    position: absolute;
+    content: "";
+    left: 50%;
+    top: 50%;
+    height: 40px;
+    width: 40px;
+    z-index: -1;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+.days .normal:hover {
+    color: #000000;
+}
+.days li.active::before{
+    background: #9B59B6;
+}
+.days li:not(.active):hover::before{
+    background: #f2f2f2;
+}
