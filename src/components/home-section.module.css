@@ -34,4 +34,8 @@
     .box h1 {
         font-size: 70px;
     }
+
+    .box button {
+        padding: 15px 30px;
+    }
 }

@@ -3,8 +3,12 @@ import {faSquareFacebook, faSquareTwitter, faSquareInstagram, faSquareYoutube} f
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faLocationDot, faPhone, faEnvelope} from "@fortawesome/free-solid-svg-icons";
 import {faCopyright} from "@fortawesome/free-regular-svg-icons";
+import {useNavigate} from "react-router-dom";
 
 const Footer = () => {
+
+    const navigate = useNavigate();
+
     return (
         <section className={styles.container}>
             <div className={styles.box}>
@@ -19,11 +23,11 @@ const Footer = () => {
                 </div>
                 <div className={styles.middle}>
                     <h2>Menu</h2>
-                    <span>Home</span>
-                    <span>Menu</span>
-                    <span>Reservation</span>
-                    <span>Contact</span>
-                    <span>Account</span>
+                    <span onClick={() => navigate("/home")}>Home</span>
+                    <span onClick={() => navigate("/menu")}>Menu</span>
+                    <span onClick={() => navigate("/reservation")}>Reservation</span>
+                    <span onClick={() => navigate("/contact")}>Contact</span>
+                    <span onClick={() => navigate("/account")}>Account</span>
                 </div>
                 <div className={styles.right}>
                     <h2>Find Us</h2>

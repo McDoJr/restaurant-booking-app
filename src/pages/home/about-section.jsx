@@ -15,7 +15,7 @@ const AboutSection = () => {
                     <p>We are best Food Maker and Best Delivery restaurant to our customers
                         and find your favourite restaurants available in your zone. We have
                         than 1000 of menus online. It's quick, easy and totally secure.</p>
-                    <button onClick={() => navigate("/reservation")}>EXPLORE NOW</button>
+                    <button onClick={() => navigate("/menu")}>EXPLORE NOW</button>
                 </div>
             </div>
         </section>

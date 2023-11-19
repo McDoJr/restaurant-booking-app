@@ -1,15 +1,19 @@
 import styles from "./process-section.module.css";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faBurger, faCircleCheck} from "@fortawesome/free-solid-svg-icons";
+import {useNavigate} from "react-router-dom";
 
 const ProcessSection = () => {
+
+    const navigate = useNavigate();
+
     return (
         <section className={styles.container}>
             <div className={styles.box}>
                 <div className={styles.left}>
                     <h1>Simple steps to <br />make online booking</h1>
                     <span>Our mission is to filling your belly with <br />delicious food and excellent service.</span>
-                    <button>GET IT NOW</button>
+                    <button onClick={() => navigate("/reservation")}>GET IT NOW</button>
                 </div>
                 <div className={styles.right}>
                     <div>

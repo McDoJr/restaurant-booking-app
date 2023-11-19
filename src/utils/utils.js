@@ -3,6 +3,11 @@ export const months = () => {
     return ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 }
 
+export const weeks = () => {
+    // return ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+    return ["S", "M", "T", "W", "T", "F", "S"];
+}
+
 export const setPageTitle = (page) => {
     document.title = `TRIOS - ${page}`;
 }
@@ -11,18 +16,11 @@ export const scrollTo = (ref) => {
     ref.current?.scrollIntoView({behavior: "smooth"});
 }
 
-export const currentYear = () => {
-    return new Date().getFullYear();
+export const getMonth = (month) => {
+    return months()[month];
 }
 
-export const currentMonth = () => {
-    return months()[new Date().getMonth()];
-}
-
-export const days = () => {
-    let date = new Date(),
-        currYear = date.getFullYear(),
-        currMonth = date.getMonth();
+export const getDays = (date, currYear, currMonth) => {
     let firstDayofMonth = new Date(currYear, currMonth, 1).getDay(),
         lastDateofMonth = new Date(currYear, currMonth + 1, 0).getDate(),
         lastDayofMonth = new Date(currYear, currMonth, lastDateofMonth).getDay(),
@@ -41,4 +39,12 @@ export const days = () => {
         list.push({day: (i - lastDayofMonth + 1), name: "inactive"});
     }
     return list;
+}
+
+export const getDate = (date) => {
+    return {month: date.getMonth(), year: date.getFullYear()}
+}
+
+export const scrollToTop = () => {
+    window.scroll({top: 0});
 }

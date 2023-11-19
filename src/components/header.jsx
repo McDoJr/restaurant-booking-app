@@ -2,6 +2,7 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faEnvelope} from "@fortawesome/free-regular-svg-icons";
 import {faSquareFacebook, faSquareTwitter, faSquareInstagram, faSquareYoutube} from "@fortawesome/free-brands-svg-icons";
 import styles from "./header.module.css";
+import {Link} from "react-router-dom";
 
 const Header = () => {
     return (
@@ -23,11 +24,11 @@ const Header = () => {
                     <h1>~TRIO'S~</h1>
                     <div>
                         <ul>
-                            <li><a href="/home">Home</a></li>
-                            <li><a href="/menu">Menu</a></li>
-                            <li><a href="/reservation">Reservation</a></li>
-                            <li><a href="/contact">Contact</a></li>
-                            <li><a href="/account">Account</a></li>
+                            <li><Link to="/home">Home</Link></li>
+                            <li><Link to="/menu">Menu</Link></li>
+                            <li><Link to="/reservation">Reservation</Link></li>
+                            <li><Link to="/contact">Contact</Link></li>
+                            <li><Link to="/account">Account</Link></li>
                         </ul>
                     </div>
                 </div>

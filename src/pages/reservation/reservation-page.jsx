@@ -2,14 +2,18 @@ import Header from "../../components/header.jsx";
 import HomeSection from "../../components/home-section.jsx";
 import background from "../../images/reservation_bg.jpg";
 import {useEffect} from "react";
-import {setPageTitle} from "../../utils/utils.js";
+import {scrollToTop, setPageTitle} from "../../utils/utils.js";
 import BookSection from "./book-section.jsx";
-import Calendar from "../../components/calendar.jsx";
+import ScrollTop from "../../components/scroll-top.jsx";
+import ProcessSection from "../../components/process-section.jsx";
+import Footer from "../../components/footer.jsx";
+import ContactSection from "../../components/contact-section.jsx";
 
 const ReservationPage = () => {
 
     useEffect(() => {
         setPageTitle("Reservation");
+        scrollToTop();
     }, []);
 
     const heading = (
@@ -25,7 +29,10 @@ const ReservationPage = () => {
             <Header />
             <HomeSection heading={heading} background={background}/>
             <BookSection />
-            {/*<Calendar/>*/}
+            <ContactSection />
+            <ProcessSection />
+            <Footer />
+            <ScrollTop />
         </>
     )
 }

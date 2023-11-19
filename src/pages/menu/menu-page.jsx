@@ -4,7 +4,7 @@ import background from "../../images/menu_bg.jpg";
 import FoodSection from "../../components/food-section.jsx";
 import MenuSection from "./menu-section.jsx";
 import {useEffect, useRef} from "react";
-import {scrollTo, setPageTitle} from "../../utils/utils.js";
+import {scrollTo, scrollToTop, setPageTitle} from "../../utils/utils.js";
 import Footer from "../../components/footer.jsx";
 import ReserveSection from "../../components/reserve-section.jsx";
 import ScrollTop from "../../components/scroll-top.jsx";
@@ -15,6 +15,7 @@ const MenuPage = () => {
 
     useEffect(() => {
         setPageTitle("Menu");
+        scrollToTop();
     }, []);
 
     const heading = (

@@ -6,7 +6,7 @@ import background from "../../images/home_bg.png";
 import FoodSection from "../../components/food-section.jsx";
 import ReserveSection from "../../components/reserve-section.jsx";
 import ProcessSection from "../../components/process-section.jsx";
-import {setPageTitle} from "../../utils/utils.js";
+import {scrollToTop, setPageTitle} from "../../utils/utils.js";
 import {useEffect} from "react";
 import Footer from "../../components/footer.jsx";
 import ScrollTop from "../../components/scroll-top.jsx";
@@ -17,6 +17,7 @@ const HomePage = () => {
 
     useEffect(() => {
         setPageTitle("Home");
+        scrollToTop();
     }, []);
 
     const heading = (

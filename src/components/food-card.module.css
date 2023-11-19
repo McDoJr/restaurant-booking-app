@@ -42,8 +42,9 @@
 @media (max-width: 1366px) {
     .container {
         width: 250px;
-        height: 400px;
+        height: 350px;
         padding: 40px 0;
+        justify-content: space-between;
     }
 
     .container img {
@@ -53,7 +54,7 @@
 
     .container span {
         padding: 15px 13px;
-        top: 189px;
+        top: 163px;
         right: 33px;
     }
 }

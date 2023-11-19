@@ -2,12 +2,15 @@ import Header from "../../components/header.jsx";
 import HomeSection from "../../components/home-section.jsx";
 import background from "../../images/home_bg.png";
 import {useEffect} from "react";
-import {setPageTitle} from "../../utils/utils.js";
+import {scrollToTop, setPageTitle} from "../../utils/utils.js";
+import Footer from "../../components/footer.jsx";
+import ScrollTop from "../../components/scroll-top.jsx";
 
 const AccountPage = () => {
 
     useEffect(() => {
         setPageTitle("Account");
+        scrollToTop();
     }, []);
 
     const heading = (
@@ -22,6 +25,8 @@ const AccountPage = () => {
         <>
             <Header />
             <HomeSection heading={heading} background={background}/>
+            <Footer />
+            <ScrollTop />
         </>
     )
 }

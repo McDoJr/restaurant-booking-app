@@ -6,9 +6,11 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    border-radius: 10px;
 
     color: #ffffff;
     background-color: var(--primary-color);
+    user-select: none;
 }
 
 .top {
@@ -45,7 +47,6 @@
     flex-wrap: wrap;
     list-style: none;
     text-align: center;
-    vertical-align: middle;
 }
 
 .middle .weeks {
@@ -73,10 +74,11 @@
 }
 
 .days li.inactive{
-    color: #aaa;
+    color: #cecccc;
+    opacity: 0;
 }
 .days li.active{
-    color: #fff;
+    color: #000000;
 }
 .days li::before{
     position: absolute;
@@ -90,11 +92,88 @@
     transform: translate(-50%, -50%);
 }
 .days .normal:hover {
-    color: #000000;
+    color: #ffffff;
 }
 .days li.active::before{
-    background: #9B59B6;
+    background-color: #ffffff;
+    color: #000000;
 }
 .days li:not(.active):hover::before{
-    background: #f2f2f2;
+    background-color: #040404;
+}
+
+.bottom {
+    width: 100%;
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-around;
+}
+.bottom label {
+    font-family: var(--heading-font);
+    font-size: 20px;
+}
+
+.bottom select {
+    width: 60%;
+    padding: 5px 20px;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: var(--primary-color);
+    border: 1px solid #ffffff;
+    outline: none;
+}
+
+.bottom option {
+    background-color: #000000;
+    outline: none;
+}
+
+@media (max-width: 1366px) {
+    .container {
+        width: 530px;
+        padding: 30px 50px;
+        border-radius: 7px;
+    }
+
+    .top {
+        margin-bottom: 15px;
+    }
+
+    .top h1 {
+        font-size: 25px;
+    }
+
+    .top .icon {
+        width: 25px;
+        height: 25px;
+    }
+
+    .middle li {
+        margin-bottom: 0;
+    }
+
+    .middle .weeks li {
+        font-size: 18px;
+    }
+
+    .middle .days {
+        margin-bottom: 10px;
+    }
+
+    .middle .days li {
+        margin-top: 10px;
+        font-size: 16px;
+    }
+
+    .days li::before {
+        width: 30px;
+        height: 30px;
+    }
+
+    .bottom {
+        margin-top: 20px;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
 }

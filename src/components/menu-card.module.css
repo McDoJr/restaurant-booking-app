@@ -64,3 +64,29 @@
     font-size: 25px;
     font-weight: 600;
 }
+
+@media (max-width: 1366px) {
+    .container {
+        padding: 80px 150px;
+    }
+
+    .image {
+        width: 700px;
+    }
+
+    .details {
+        height: 500px;
+    }
+
+    .details h2 {
+        font-size: 40px;
+    }
+
+    .details div {
+        width: 350px;
+    }
+
+    .details div h3, .details div span {
+        font-size: 20px;
+    }
+}

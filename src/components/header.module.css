@@ -70,5 +70,11 @@
     border-bottom: 2px solid var(--primary-color);
 }
 
+@media (max-width: 1366px) {
+    .bottom a {
+        padding: 5px 10px;
+    }
+}
+
 
 

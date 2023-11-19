@@ -58,6 +58,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    user-select: none;
 }
 
 .right {
@@ -97,7 +98,8 @@
     }
 
     .container .copyright {
-        margin: 50px 0 0 90px;
+        margin: 50px 0 0 118px;
+        font-size: 12px;
     }
 
     .right, .middle {

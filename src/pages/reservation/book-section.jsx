@@ -22,7 +22,7 @@ const BookSection = () => {
                             <label>Add Note</label>
                             <textarea placeholder="Enter your note"></textarea>
                         </div>
-                        <button>SUBMIT</button>
+                        <button>Submit Reservation</button>
                     </form>
                     <Calendar />
                 </div>
