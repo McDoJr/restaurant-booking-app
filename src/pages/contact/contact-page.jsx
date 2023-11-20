@@ -5,6 +5,8 @@ import {useEffect} from "react";
 import {scrollToTop, setPageTitle} from "../../utils/utils.js";
 import Footer from "../../components/footer.jsx";
 import ScrollTop from "../../components/scroll-top.jsx";
+import ContactSection from "../../components/contact-section.jsx";
+import InquireSection from "./inquire-section.jsx";
 
 const ContactPage = () => {
 
@@ -25,6 +27,8 @@ const ContactPage = () => {
         <>
             <Header />
             <HomeSection heading={heading} background={background}/>
+            <ContactSection />
+            <InquireSection />
             <Footer />
             <ScrollTop />
         </>

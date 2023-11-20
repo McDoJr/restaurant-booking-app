@@ -1,0 +1,77 @@
+.container {
+    width: 100%;
+    height: 100vh;
+    padding: 0 150px;
+
+    display: flex;
+    justify-content: center;
+
+    border: 1px solid #ffffff;
+}
+
+.box {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.box .details {
+    width: 50%;
+    height: 100%;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.box .details .desc {
+    display: flex;
+    flex-direction: column;
+}
+
+.box .details .desc h1 {
+    font-family: var(--heading-font);
+    font-size: 30px;
+}
+
+.box .details mark {
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+    background-color: unset;
+}
+
+.box .details .form .row {
+    display: flex;
+    margin: 20px 0;
+    flex-direction: column;
+    align-items: start;
+}
+
+.box .image {
+    width: 50%;
+    height: calc(100% - 180px);
+
+    background-image: url("../../images/inquire.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 50%;
+    position: relative;
+}
+
+.box .image:before {
+    content: "";
+    width: 580px;
+    height: 580px;
+    border: 2px solid var(--primary-color);
+    border-radius: 50%;
+    position: absolute;
+    transform: translate(-33px, -33px);
+}
+.box .details button {
+    padding: 10px 30px;
+}
