@@ -19,7 +19,7 @@
 
 .container .copyright {
     font-size: 14px;
-    margin: 50px 0 0 200px;
+    margin: 50px 0 0 173px;
 }
 
 .copyright .icon {
@@ -53,24 +53,25 @@
 }
 
 .middle {
-    height: 80%;
-    padding-top: 50px;
+    height: 100%;
+    padding-top: 80px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: start;
     user-select: none;
 }
 
 .right {
-    height: 80%;
-    padding: 50px 0;
+    height: 100%;
+    padding-top: 80px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: start;
     align-items: start;
 }
 
 .right h2, .middle h2 {
+    margin-bottom: 10px;
     padding: 10px 0;
     font-size: 25px;
     border-bottom: 2px solid var(--primary-color);
@@ -85,6 +86,7 @@
 .right span, .middle span {
     font-size: 20px;
     transition: all .3s ease;
+    margin: 5px 0;
 }
 
 .middle span:hover {
@@ -98,12 +100,26 @@
     }
 
     .container .copyright {
-        margin: 50px 0 0 118px;
+        margin: 20px 0 0 104px;
         font-size: 12px;
+    }
+
+    .left {
+        justify-content: space-around;
+    }
+
+    .left h1{
+        font-size: 30px;
+    }
+
+    .left .icon {
+        width: 15px;
+        height: 15px;
     }
 
     .right, .middle {
         height: 100%;
+        padding-top: 50px;
     }
 
     .right h2, .middle h2 {

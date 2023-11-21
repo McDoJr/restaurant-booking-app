@@ -1,6 +1,6 @@
 import styles from "./menu-card.module.css";
 
-const MenuCard = ({heading, items, image, backgroundColor, isInverted}) => {
+const MenuCard = ({heading, items, image, backgroundColor, isInverted, handleClick}) => {
 
     const getClassName = (name) => {
         return isInverted ? `${styles[name]} ${styles.inverted}` : `${styles[name]}`;
@@ -11,10 +11,10 @@ const MenuCard = ({heading, items, image, backgroundColor, isInverted}) => {
             <div className={styles.image} style={{backgroundImage: `url(${image})`}}></div>
             <div className={getClassName("details")}>
                 <h2>{heading}</h2>
-                {items.map(({name, price}, index) => {
+                {items.map(({name, price, photo}, index) => {
                     return (
                         <div key={index}>
-                            <h3>{name}</h3>
+                            <h3 onClick={(e) => handleClick(e, photo)}>{name}</h3>
                             <span>{`$${price}`}</span>
                         </div>
                     )

@@ -57,6 +57,11 @@
     color: #000000;
     font-size: 28px;
     font-weight: 650;
+    cursor: pointer;
+}
+
+.details h3:hover {
+    color: var(--primary-color);
 }
 
 .details div span {

@@ -1,7 +1,7 @@
 .container {
     width: 100%;
     height: 100vh;
-    padding: 50px 150px;
+    padding: 0 150px;
 
     background-color: #000000;
     color: #ffffff;
@@ -18,7 +18,7 @@
 }
 
 .box h1 {
-    margin: 100px 0;
+    margin: 50px 0;
     font-family: var(--heading-font);
     font-size: 70px;
     font-weight: 400;
@@ -29,22 +29,27 @@
 
     display: flex;
     justify-content: space-between;
-    align-items: center;
 }
 
 .form {
-    width: 47%;
+    width: 48%;
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     align-items: start;
 }
 
 .form .row {
     width: 100%;
+    margin: 20px 0;
     display: flex;
     flex-direction: column;
+}
+
+.form .row label {
+    font-size: 20px;
+    margin-bottom: 10px;
 }
 
 .form .row:first-child {
@@ -63,31 +68,50 @@
     border: 1px solid var(--primary-color);
     border-radius: 5px;
     outline: none;
+    font-size: 18px;
+}
+
+.form .row input {
+    padding: 10px;
 }
 
 .form .row textarea {
     padding: 10px;
-    height: 140px;
+    height: 240px;
 }
 
 .form button {
+    margin-top: 20px;
     letter-spacing: .1rem;
-    font-weight: 400;
-    padding: 10px 30px;
+    font-weight: 600;
 }
 
 @media (max-width: 1366px) {
     .box h1 {
-        margin: 50px 0;
+        margin: 90px 0;
         font-size: 40px;
     }
 
+    .form .row {
+        margin: 5px 0;
+    }
+
     .form .row label {
-        font-size: 16px;
+        font-size: 15px;
         margin: 10px 0;
     }
 
     .form .row .field input {
         padding: 10px;
+        font-size: 14px;
+    }
+
+    .form .row textarea {
+        height: 120px;
+        font-size: 14px;
+    }
+
+    .form button {
+        padding: 10px 30px
     }
 }

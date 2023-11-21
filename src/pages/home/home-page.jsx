@@ -18,6 +18,7 @@ const HomePage = () => {
     useEffect(() => {
         setPageTitle("Home");
         scrollToTop();
+        // alert(`${window.screen.width}px / ${window.screen.height}`);
     }, []);
 
     const heading = (

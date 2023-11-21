@@ -1,7 +1,7 @@
 .container {
     width: 100%;
     height: 60vh;
-    padding: 100px 150px;
+    padding: 220px 150px;
 
     display: flex;
     justify-content: space-between;
@@ -24,4 +24,10 @@
     margin: 20px 0;
     font-size: 25px;
     font-weight: 600;
+}
+
+@media (max-width: 1366px) {
+    .container {
+        padding-top: 100px;
+    }
 }

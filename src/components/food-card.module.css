@@ -1,6 +1,7 @@
 .container {
     height: 500px;
-    width: 390px;
+    /*width: 390px;*/
+    width: calc((100% / 4) - 10px);
     background-color: #ffffff;
 
     display: flex;
@@ -18,6 +19,11 @@
     border-radius: 50%;
     background-repeat: no-repeat;
     background-size: contain;
+    object-fit: contain;
+}
+
+.container img:hover {
+    transform: scale(1.03);
 }
 
 .container h3 {
@@ -31,7 +37,6 @@
     color: #ffffff;
     background-color: var(--primary-color);
     font-size: 20px;
-    border: 1px solid #ffffff;
     border-radius: 50%;
 
     position: absolute;
@@ -41,7 +46,6 @@
 
 @media (max-width: 1366px) {
     .container {
-        width: 250px;
         height: 350px;
         padding: 40px 0;
         justify-content: space-between;

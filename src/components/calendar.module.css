@@ -1,5 +1,5 @@
 .container {
-    width: 50%;
+    width: 48%;
     padding: 50px;
 
     display: flex;
@@ -131,7 +131,6 @@
 
 @media (max-width: 1366px) {
     .container {
-        width: 530px;
         padding: 30px 50px;
         border-radius: 7px;
     }

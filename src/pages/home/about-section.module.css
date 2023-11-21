@@ -7,25 +7,28 @@
     justify-content: space-between;
     align-items: center;
     color: #ffffff;
+
 }
 
 .box {
     height: 100%;
     width: 100%;
     display: flex;
+
 }
 
 .image {
     height: 100%;
-    width: 54%;
+    width: 60%;
     background-image: url("../../images/about.jpg");
     background-size: contain;
     background-repeat: no-repeat;
+
 }
 
 .details {
     height: 100%;
-    width: 50%;
+    width: 44%;
     padding: 120px;
 
     display: flex;
@@ -53,11 +56,20 @@
         padding: 30px;
     }
 
-    .details h3 {
+    .details h2 {
         font-size: 40px;
     }
 
+    .details h3 {
+        font-size: 30px;
+    }
+
+    .details p {
+        font-size: 14px;
+    }
+
     .details button {
-        padding: 15px 40px;
+        font-size: 14px;
+        padding: 10px 30px;
     }
 }
