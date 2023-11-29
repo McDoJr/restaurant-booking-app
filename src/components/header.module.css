@@ -70,8 +70,24 @@
     border-bottom: 2px solid var(--primary-color);
 }
 
+.bottom li.active a {
+    color: var(--primary-color);
+}
+
 @media (max-width: 1366px) {
+
+    .icon {
+        width: 14px;
+        height: 14px;
+        margin: 0 5px;
+    }
+
+    .bottom h1 {
+        font-size: 30px;
+    }
+
     .bottom a {
+        font-size: 14px;
         padding: 5px 10px;
     }
 }

@@ -4,7 +4,7 @@ const InquireSection = () => {
     return (
         <section className={styles.container}>
             <div className={styles.box}d>
-                <div className={styles.details}>
+                <div className={styles.left}>
                     <div className={styles.desc}>
                         <h1>Do you have any <br /><mark>inquirements?</mark></h1>
                         <span>Feel free to message us!</span>
@@ -21,7 +21,9 @@ const InquireSection = () => {
                         <button>SEND MESSAGE</button>
                     </form>
                 </div>
-                <div className={styles.image}></div>
+                <div className={styles.right}>
+                    <div className={styles.image}></div>
+                </div>
             </div>
         </section>
     )

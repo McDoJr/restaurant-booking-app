@@ -36,6 +36,10 @@
         font-size: 70px;
     }
 
+    .box h2 {
+        font-size: 14px;
+    }
+
     .box button {
         padding: 15px 30px;
     }

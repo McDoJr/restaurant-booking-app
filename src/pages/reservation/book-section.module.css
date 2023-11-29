@@ -64,6 +64,18 @@
     flex-direction: column;
 }
 
+.form .row .field div, .form .row .bottom-row {
+    width: 100%;
+    margin: 5px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form .row .field div span, .form .row .bottom-row span {
+    color: red;
+}
+
 .form .row input, .form .row textarea {
     border: 1px solid var(--primary-color);
     border-radius: 5px;

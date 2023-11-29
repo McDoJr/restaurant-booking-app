@@ -46,3 +46,9 @@
     color: #ffffff;
     cursor: pointer;
 }
+
+@media (max-width: 1366px) {
+    .container h1 {
+        font-size: 50px;
+    }
+}

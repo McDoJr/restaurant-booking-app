@@ -6,7 +6,7 @@ import {scrollToTop, setPageTitle} from "../../utils/utils.js";
 import Footer from "../../components/footer.jsx";
 import ScrollTop from "../../components/scroll-top.jsx";
 
-const AccountPage = () => {
+const AccountPage = ({ loggedIn, setLoggedIn }) => {
 
     useEffect(() => {
         setPageTitle("Account");
@@ -23,9 +23,9 @@ const AccountPage = () => {
 
     return (
         <>
-            <Header />
+            <Header currentPage="account" loggedIn={loggedIn} setLoggedIn={setLoggedIn}/>
             <HomeSection heading={heading} background={background}/>
-            <Footer />
+            <Footer currentPage="account"/>
             <ScrollTop />
         </>
     )

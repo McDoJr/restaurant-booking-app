@@ -48,3 +48,14 @@ export const getDate = (date) => {
 export const scrollToTop = () => {
     window.scroll({top: 0});
 }
+
+export const isValidEmail = (email) => {
+    return email.trim() && /\S+@\S\.\S+/.test(email);
+}
+
+export const validate = (obj, name) => {
+    if(obj) {
+        return {status: true, message: `success!`};
+    }
+    return {status: false, message: `${name} is required!`};
+}

@@ -4,14 +4,13 @@ import {faAngleLeft, faAngleRight} from "@fortawesome/free-solid-svg-icons";
 import {getMonth, getDays, weeks} from "../utils/utils.js";
 import {useState} from "react";
 
-const Calendar = () => {
+const Calendar = ({handleDayTimeChange}) => {
     let date = new Date(),
-        currDay = date.getDay(),
+        currDay = date.getDate(),
         currMonth = date.getMonth(),
         currYear = date.getFullYear();
 
     const [days, setDays] = useState(getDays(date, currYear, currMonth));
-    const [day, setDay] = useState(currDay);
     const [month, setMonth] = useState(currMonth);
     const [monthName, setMonthName] = useState(getMonth(currMonth));
     const [year, setYear] = useState(currYear);
@@ -36,10 +35,21 @@ const Calendar = () => {
         setDays(getDays(date, currYear, currMonth));
     }
 
-    const handleDay = (e, day) => {
+    const handleDay = (e, selectedDay) => {
         e.preventDefault();
-
-        console.log(day);
+        if(selectedDay < currDay && month <= currMonth && year <= currYear){
+            console.log("Invalid day!");
+            return;
+        }
+        let tempDays = days.slice();
+        tempDays = tempDays.map((obj) => {
+            if(obj.name !== "inactive") {
+                obj.name = obj.day === selectedDay ? "active" : "normal";
+            }
+            return obj;
+        });
+        handleDayTimeChange("day", selectedDay);
+        setDays(tempDays);
     }
 
     return (
@@ -60,7 +70,7 @@ const Calendar = () => {
             </div>
             <div className={styles.bottom}>
                 <label>Select Time :</label>
-                <select>{
+                <select name="time" onChange={(e) => handleDayTimeChange(e.target.name, e.target.value)}>{
                     timeList.map((time, index) => <option value={time} key={index}>{time}</option>)
                 }</select>
             </div>

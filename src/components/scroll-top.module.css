@@ -22,3 +22,11 @@
     pointer-events: auto;
     bottom: 50px;
 }
+
+@media (max-width: 1366px) {
+    .icon {
+        width: 25px;
+        height: 25px;
+        padding: 10px;
+    }
+}

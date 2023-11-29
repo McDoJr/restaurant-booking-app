@@ -2,11 +2,11 @@ import styles from "./login-page.module.css";
 import Header from "../../components/header.jsx";
 import LoginSection from "./login-section.jsx";
 
-const LoginPage = () => {
+const LoginPage = ({ username, password, setLoggedIn }) => {
     return (
         <>
-            <Header />
-            <LoginSection />
+            <Header currentPage="login" loggedIn={false}/>
+            <LoginSection user={username} pass={password} setLoggedIn={setLoggedIn}/>
         </>
     )
 }

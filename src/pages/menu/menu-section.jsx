@@ -1,29 +1,5 @@
 import styles from "./menu-section.module.css";
 import MenuCard from "../../components/menu-card.jsx";
-import appertizers from "../../images/appertizer.jpg";
-import mainCourse from "../../images/main_course.jpg";
-import desserts from "../../images/desserts.jpg";
-import drinks from "../../images/drinks.jpg";
-import salad from "../../images/salad.jpg";
-import croquette from "../../images/croquette.jpg";
-import sambosa from "../../images/sambosa.jpg";
-import canape from "../../images/canape.jpg";
-import ascpicJelly from "../../images/aspic_jelly.jpg";
-import sirloinSteak from "../../images/sirloin_steak.jpg";
-import koreanSoup from "../../images/korean_soup.jpg";
-import salmonPasta from "../../images/salmon_pasta.jpg";
-import chickenCurry from "../../images/chicken_curry.jpg";
-import dimsum from "../../images/dimsum.jpg";
-import panacottaPancake from "../../images/pancake.jpg";
-import icecream from "../../images/ice_cream.jpg";
-import brownies from "../../images/brownies.jpg";
-import americanPie from "../../images/american_pie.jpg";
-import banoffie  from "../../images/banoffie.jpg";
-import avocadoShake from "../../images/avocado_shake.jpg";
-import sangerCoffee from "../../images/sanger_coffee.jpg";
-import greenTea from "../../images/green_tea.jpg";
-import lemonTea from "../../images/lemon_tea.jpg";
-import chocolateMilk from "../../images/chocolate_milk.jpg";
 
 import {useState} from "react";
 
@@ -39,53 +15,53 @@ const MenuSection = () => {
         {
             heading: "The Appertizers",
             items: [
-                { name: "Salad", price: 50, photo: salad },
-                { name: "Croquette", price: 22, photo: croquette },
-                { name: "Sambosa", price: 37, photo: sambosa },
-                { name: "Canape", price: 41, photo: canape },
-                { name: "Ascpic Jelly", price: 19, photo: ascpicJelly }
+                { name: "Salad", price: 50, photo: require("../../images/salad.jpg") },
+                { name: "Croquette", price: 22, photo: require("../../images/croquette.jpg") },
+                { name: "Sambosa", price: 37, photo: require("../../images/sambosa.jpg") },
+                { name: "Canape", price: 41, photo: require("../../images/canape.jpg") },
+                { name: "Ascpic Jelly", price: 19, photo: require("../../images/aspic_jelly.jpg") }
             ],
             color: "#f2af5c",
-            background: appertizers,
+            background: require("../../images/appertizer.jpg"),
             isInverted: false
         },
         {
             heading: "Main Course",
             items: [
-                { name: "Sirloin Steak", price: 50, photo: sirloinSteak  },
-                { name: "Korean Spicy Soup", price: 22, photo: koreanSoup  },
-                { name: "Salmon Pasta", price: 37, photo: salmonPasta  },
-                { name: "Chicken Curry Special", price: 41, photo: chickenCurry  },
-                { name: "Dimsum", price: 19, photo: dimsum  }
+                { name: "Sirloin Steak", price: 50, photo: require("../../images/sirloin_steak.jpg")  },
+                { name: "Korean Spicy Soup", price: 22, photo: require("../../images/korean_soup.jpg")  },
+                { name: "Salmon Pasta", price: 37, photo: require("../../images/salmon_pasta.jpg")  },
+                { name: "Chicken Curry Special", price: 41, photo: require("../../images/chicken_curry.jpg")  },
+                { name: "Dimsum", price: 19, photo: require("../../images/dimsum.jpg")  }
             ],
             color: "#000000",
-            background: mainCourse,
+            background: require("../../images/main_course.jpg"),
             isInverted: true
         },
         {
             heading: "Good Desserts",
             items: [
-                { name: "Panacotta Pancake", price: 50, photo: panacottaPancake   },
-                { name: "Ice Cream", price: 22, photo: icecream },
-                { name: "Brownies", price: 37, photo: brownies },
-                { name: "American Pie", price: 41, photo: americanPie },
-                { name: "Banoffie", price: 19, photo: banoffie }
+                { name: "Panacotta Pancake", price: 50, photo: require("../../images/pancake.jpg")   },
+                { name: "Ice Cream", price: 22, photo: require("../../images/ice_cream.jpg") },
+                { name: "Brownies", price: 37, photo: require("../../images/brownies.jpg") },
+                { name: "American Pie", price: 41, photo: require("../../images/american_pie.jpg") },
+                { name: "Banoffie", price: 19, photo: require("../../images/banoffie.jpg") }
             ],
             color: "#f2af5c",
-            background: desserts,
+            background: require("../../images/desserts.jpg"),
             isInverted: false
         },
         {
             heading: "Hot & Cold Drinks",
             items: [
-                { name: "Avacado Milkshake", price: 50, photo: avocadoShake },
-                { name: "Sanger Coffee", price: 22, photo: sangerCoffee },
-                { name: "Green Tea", price: 37, photo: greenTea },
-                { name: "Lemon Tea", price: 41, photo: lemonTea },
-                { name: "Chocolate Milk Anger", price: 19, photo: chocolateMilk }
+                { name: "Avacado Milkshake", price: 50, photo: require("../../images/avocado_shake.jpg") },
+                { name: "Sanger Coffee", price: 22, photo: require("../../images/sanger_coffee.jpg") },
+                { name: "Green Tea", price: 37, photo: require("../../images/green_tea.jpg") },
+                { name: "Lemon Tea", price: 41, photo: require("../../images/lemon_tea.jpg") },
+                { name: "Chocolate Milk Anger", price: 19, photo: require("../../images/chocolate_milk.jpg") }
             ],
             color: "#000000",
-            background: drinks,
+            background: require("../../images/drinks.jpg"),
             isInverted: true
         }
     ];

@@ -4,10 +4,19 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faLocationDot, faPhone, faEnvelope} from "@fortawesome/free-solid-svg-icons";
 import {faCopyright} from "@fortawesome/free-regular-svg-icons";
 import {useNavigate} from "react-router-dom";
+import {scrollToTop} from "../utils/utils.js";
 
-const Footer = () => {
+const Footer = ({currentPage}) => {
 
     const navigate = useNavigate();
+
+    const handleClick = (pageName, path) => {
+        if (pageName === currentPage) {
+            scrollToTop();
+        }else {
+           navigate(path);
+        }
+    }
 
     return (
         <section className={styles.container}>
@@ -23,11 +32,11 @@ const Footer = () => {
                 </div>
                 <div className={styles.middle}>
                     <h2>Menu</h2>
-                    <span onClick={() => navigate("/home")}>Home</span>
-                    <span onClick={() => navigate("/menu")}>Menu</span>
-                    <span onClick={() => navigate("/reservation")}>Reservation</span>
-                    <span onClick={() => navigate("/contact")}>Contact</span>
-                    <span onClick={() => navigate("/account")}>Account</span>
+                    <span onClick={() => handleClick("home", "/home")}>Home</span>
+                    <span onClick={() => handleClick("menu", "/menu")}>Menu</span>
+                    <span onClick={() => handleClick("reservation", "/reservation")}>Reservation</span>
+                    <span onClick={() => handleClick("contact", "/contact")}>Contact</span>
+                    <span onClick={() => handleClick("account", "/account")}>Account</span>
                 </div>
                 <div className={styles.right}>
                     <h2>Find Us</h2>

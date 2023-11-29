@@ -46,19 +46,20 @@
 
 @media (max-width: 1366px) {
     .container {
-        height: 350px;
+        height: 300px;
         padding: 40px 0;
         justify-content: space-between;
     }
 
     .container img {
-        width: 180px;
-        height: 180px;
+        width: 150px;
+        height: 150px;
     }
 
     .container span {
         padding: 15px 13px;
-        top: 163px;
+        font-size: 16px;
+        top: 140px;
         right: 33px;
     }
 }

@@ -11,7 +11,7 @@ import {useEffect} from "react";
 import Footer from "../../components/footer.jsx";
 import ScrollTop from "../../components/scroll-top.jsx";
 import {useNavigate} from "react-router-dom";
-const HomePage = () => {
+const HomePage = ({ loggedIn, setLoggedIn }) => {
 
     const navigate = useNavigate();
 
@@ -31,14 +31,14 @@ const HomePage = () => {
 
     return (
         <>
-            <Header />
+            <Header currentPage="home" loggedIn={loggedIn} setLoggedIn={setLoggedIn}/>
             <HomeSection heading={heading} background={background}/>
             <h1 className={styles.title}>Trio's Restaurant</h1>
             <AboutSection />
             <FoodSection />
             <ReserveSection />
             <ProcessSection />
-            <Footer />
+            <Footer currentPage="home"/>
             <ScrollTop />
         </>
     )
