@@ -5,6 +5,7 @@
 
     background-color: #000000;
     color: #ffffff;
+    position: relative;
 }
 
 .box {
@@ -81,6 +82,7 @@
     border-radius: 5px;
     outline: none;
     font-size: 18px;
+    color: black;
 }
 
 .form .row input {

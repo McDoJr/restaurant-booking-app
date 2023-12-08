@@ -9,7 +9,7 @@ import Footer from "../../components/footer.jsx";
 import ReserveSection from "../../components/reserve-section.jsx";
 import ScrollTop from "../../components/scroll-top.jsx";
 
-const MenuPage = ({ loggedIn, setLoggedIn }) => {
+const MenuPage = () => {
 
     const food = useRef(null);
 
@@ -28,7 +28,7 @@ const MenuPage = ({ loggedIn, setLoggedIn }) => {
 
     return (
         <>
-            <Header currentPage="menu" loggedIn={loggedIn} setLoggedIn={setLoggedIn}/>
+            <Header currentPage="menu"/>
             <HomeSection heading={heading} background={background}/>
             <FoodSection ref={food}/>
             <MenuSection />

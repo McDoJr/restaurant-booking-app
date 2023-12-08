@@ -1,23 +1,30 @@
 import styles from "./login-section.module.css";
 import {Link, useNavigate} from "react-router-dom";
-import {useState} from "react";
+import {useContext, useState} from "react";
+import {DataContext} from "../../App.jsx";
 
-const LoginSection = ({ user, pass, setLoggedIn }) => {
+const LoginSection = () => {
 
     const navigate = useNavigate();
 
-    const [username, setUsername] = useState("");
-    const [password, setPassword] = useState("");
+    const {USERNAME, PASSWORD, setLoggedIn, profiles} = useContext(DataContext);
+
+    const [formData, setFormData] = useState({email: "", password: ""});
+
+    const handleChange = (e) => {
+        const {name, value} = e.target;
+        setFormData({...formData, [name]: value});
+    }
 
     const handleSubmit = (e) => {
         e.preventDefault();
-
-        if(username === user && password === pass) {
-            setLoggedIn(true);
+        const {email, password} = formData;
+        const profile = profiles.find(profile => profile.email === email && profile.password === password);
+        if(profile || (USERNAME === email && PASSWORD === password)) {
+            setLoggedIn(profile);
             navigate("/");
-        }else {
-            setUsername("");
-            setPassword("");
+        }else{
+            setFormData({email: "", password: ""});
         }
     }
 
@@ -27,11 +34,11 @@ const LoginSection = ({ user, pass, setLoggedIn }) => {
                 <h1>Login</h1>
                 <div className={styles.row}>
                     <label>Email Address</label>
-                    <input type="text" value={username} onChange={(e) => setUsername(e.target.value)}/>
+                    <input type="text" name="email" value={formData.email} onChange={handleChange}/>
                 </div>
                 <div className={styles.row}>
                     <label>Password</label>
-                    <input type="password" value={password} onChange={(e) => setPassword(e.target.value)}/>
+                    <input type="password" name="password" value={formData.password} onChange={handleChange}/>
                 </div>
                 <button>SUBMIT</button>
                 <span>Do you have an account yet? <Link to="/register">Register</Link></span>

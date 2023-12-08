@@ -59,3 +59,11 @@ export const validate = (obj, name) => {
     }
     return {status: false, message: `${name} is required!`};
 }
+
+export const profile = (firstname, lastname, email, phone, password) => {
+    return {uuid: 0, firstname, lastname, email, phone, password, reservations: []};
+}
+
+export const reservation = (id, persons, tables, note, date, time) => {
+    return {id, persons, tables, note, date, time};
+}

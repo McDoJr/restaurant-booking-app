@@ -8,7 +8,7 @@ import ScrollTop from "../../components/scroll-top.jsx";
 import ContactSection from "../../components/contact-section.jsx";
 import InquireSection from "./inquire-section.jsx";
 
-const ContactPage = ({ loggedIn, setLoggedIn }) => {
+const ContactPage = () => {
 
     useEffect(() => {
         setPageTitle("Contact");
@@ -25,7 +25,7 @@ const ContactPage = ({ loggedIn, setLoggedIn }) => {
 
     return (
         <>
-            <Header currentPage="contact" loggedIn={loggedIn} setLoggedIn={setLoggedIn}/>
+            <Header currentPage="contact"/>
             <HomeSection heading={heading} background={background}/>
             <ContactSection />
             <InquireSection />

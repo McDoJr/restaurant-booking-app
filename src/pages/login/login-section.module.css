@@ -44,6 +44,7 @@
     outline: none;
     border: 1px solid var(--primary-color);
     border-radius: 5px;
+    color: black;
 }
 
 .form button {

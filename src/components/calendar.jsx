@@ -48,7 +48,7 @@ const Calendar = ({handleDayTimeChange}) => {
             }
             return obj;
         });
-        handleDayTimeChange("day", selectedDay);
+        handleDayTimeChange("date", {day: selectedDay, month, year});
         setDays(tempDays);
     }
 

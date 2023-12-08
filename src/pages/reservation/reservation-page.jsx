@@ -9,7 +9,7 @@ import ProcessSection from "../../components/process-section.jsx";
 import Footer from "../../components/footer.jsx";
 import ContactSection from "../../components/contact-section.jsx";
 
-const ReservationPage = ({ loggedIn, setLoggedIn }) => {
+const ReservationPage = () => {
 
     const book = useRef(null);
 
@@ -28,7 +28,7 @@ const ReservationPage = ({ loggedIn, setLoggedIn }) => {
 
     return (
         <>
-            <Header currentPage="reservation" loggedIn={loggedIn} setLoggedIn={setLoggedIn}/>
+            <Header currentPage="reservation"/>
             <HomeSection heading={heading} background={background}/>
             <BookSection ref={book}/>
             <ContactSection />
